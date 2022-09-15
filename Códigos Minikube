@@ -1,0 +1,36 @@
+INICIANDO O MINIKUBE !
+. minikube start 
+
+PARANDO O MINIKUBE !
+. minikube stop 
+
+PARA CONECTAR O MINIKUBE VIA SSH !
+. minikube ssh 
+
+PARA SABER O IP DO MINIKUBE !
+. minikube ip 
+
+PARA SABER INFORMAÇÕES DO CLUSTER MINIKUBE !
+. kubectl cluster-info 
+
+PARA HABILITAR O KUBERNETS DASHBOARD NO MINIKUBE ! 
+. minikube dashboard 
+
+( No passo anterior, se você executar um Ctrl+C, o dashboard é fechado).  
+PARA EVITARMOS ISSO EXECUTAMOS O COMANDO:
+
+. Kubectl proxy 
+
+PARA FAZER O DEPLOY DE UMA APLICAÇÃO !
+
+. kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10 
+
+PARA EXPOR O SERVIÇO !
+
+. kubectl expose deployment hello-minikube --type=NodePort --port=8080
+
+PARA PEGAR OS DADOS ! 
+
+. minikube service hello-minikube --url
+
+APÓS O PROCESSO SERÁ POSSIVEL ACESSAR A APLICAÇÃO USANDO A URL 
